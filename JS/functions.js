@@ -1,33 +1,41 @@
 function hideAndShow(screen) {
-    var classesToHide = []
-    var classesToShow = []
-    classesToHide.push('main')
-    classesToHide.push('placeholder1')
-    classesToHide.push('placeholder2')
-    var classesToHideExclude = classesToHide.indexOf(screen)
+    var classesToHide = ['main', 'placeholder1', 'placeholder2'];
+    var classesToHideExclude = classesToHide.indexOf(screen);
+  
     if (classesToHideExclude > -1) {
-        classesToHide.splice(classesToHideExclude, 1);
+      classesToHide.splice(classesToHideExclude, 1);
     }
-    classesToShow = [screen]
+  
+    var classesToShow = [screen];
+  
+    return {
+      classesToHide: classesToHide,
+      classesToShow: classesToShow
+    };
 }
-
+  
 function changeContent(screen) {
-    hideAndShow(screen)
-
-    var elementsToHide = []
-    var elementsToShow = []
-
+    var { classesToHide, classesToShow } = hideAndShow(screen);
+  
+    var elementsToHide = [];
+    var elementsToShow = [];
+  
     for (var i = 0; i < classesToHide.length; i++) {
-        elementsToHide.push(document.getElementsByClassName(classesToHide[i]))
+        var elements = document.getElementsByClassName(classesToHide[i]);
+  
+        for (var i = 0; i < elements.length; i++) {
+        elementsToHide.push(elements[i]);
+        }
     }
-    elementsToShow = classesToShow
-
+  
+    elementsToShow = document.getElementsByClassName(screen);
+  
     for (var i = 0; i < elementsToHide.length; i++) {
-        elementsToHide[i].style.display = "none";
+      elementsToHide[i].style.display = "none";
     }
   
     for (var i = 0; i < elementsToShow.length; i++) {
-        elementsToShow[i].style.display = "block";
+      elementsToShow[i].style.display = "block";
     }
 }
 
