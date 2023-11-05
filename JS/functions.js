@@ -24,8 +24,8 @@ function changeContent(screen) {
     for (var i = 0; i < classesToHide.length; i++) {
         var elements = document.getElementsByClassName(classesToHide[i]);
   
-        for (var i = 0; i < elements.length; i++) {
-        elementsToHide.push(elements[i]);
+        for (var j = 0; j < elements.length; j++) {
+        elementsToHide.push(elements[j]);
         }
     }
   
