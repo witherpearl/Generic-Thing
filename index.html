@@ -15,15 +15,17 @@
             Generic Thing
         </h1>
         <nav>
-            <button class="Menu" onclick="changeContent('main')">Main</button>
-            <button class="Menu" onclick="changeContent('placeholder1')">P1</button>
-            <button class="Menu" onclick="changeContent('placeholder2')">P2</button>
+            <button class="menu" onclick="changeContent('main')">Main</button>
+            <button class="menu" onclick="changeContent('placeholder1')">P1</button>
+            <button class="menu" onclick="changeContent('placeholder2')">P2</button>
         </nav>
     </div>
 </header>
 <body>
     <p id="somethings">0 Somethings</p>
-    <button class="main" onclick="getSomething()" id="clickable">Get Something</button>
-    <button class="main" onclick="buySomethingsPerPress()" id="perClickUpgrade1">Grow More Hands (You have 1 hands) Cost: 10 Somethings</button>
+    <div id="main">
+        <button class="main" onclick="getSomething()" id="clickable">Get Something</button>
+        <button class="main" onclick="buySomethingsPerPress()" id="perClickUpgrade1">Grow More Hands (You have 1 hands) Cost: 10 Somethings</button>
+    </div>
 </body>
 </html>
