@@ -1,4 +1,4 @@
-#main {
+.button {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
@@ -12,10 +12,11 @@
     cursor: pointer;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 }
-  
-#main:hover {
+.button:hover {
   background-color: #484848;
 }
+
+/*Reminder to sort stuff below*/
 
 .menu {
   justify-content: center;
@@ -35,4 +36,10 @@
 
 .menu:hover {
   background-color: #484848;
+}
+
+.textStyle1 {
+  color: #9f9f9f;
+  text-align: center;
+  font-size: 25px;
 }

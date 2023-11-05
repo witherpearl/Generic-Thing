@@ -11,21 +11,19 @@
 </head>
 <header>
     <div>
-        <h1>
+        <div class="textStyle1">
             Generic Thing
-        </h1>
+        </div>
         <nav>
-            <button class="menu" onclick="changeContent('main')">Main</button>
-            <button class="menu" onclick="changeContent('placeholder1')">P1</button>
-            <button class="menu" onclick="changeContent('placeholder2')">P2</button>
+            <button class="menu button" onclick="changeContent('main')">Main</button>
+            <button class="menu button" onclick="changeContent('placeholder1')">P1</button>
+            <button class="menu button" onclick="changeContent('placeholder2')">P2</button>
         </nav>
     </div>
 </header>
 <body>
     <p id="somethings">0 Somethings</p>
-    <div id="main">
-        <button class="main" onclick="getSomething()" id="clickable">Get Something</button>
-        <button class="main" onclick="buySomethingsPerPress()" id="perClickUpgrade1">Grow More Hands (You have 1 hands) Cost: 10 Somethings</button>
-    </div>
+    <button class="main button" onclick="getSomething()" id="clickable">Get Something</button>
+    <button class="main button" onclick="buySomethingsPerPress()" id="perClickUpgrade1">Grow More Hands (You have 1 hands) Cost: 10 Somethings</button>
 </body>
 </html>
