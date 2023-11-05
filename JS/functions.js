@@ -15,6 +15,7 @@ function hideAndShow(screen) {
 }
   
 function changeContent(screen) {
+    console.log(screen)
     var { classesToHide, classesToShow } = hideAndShow(screen);
   
     var elementsToHide = [];
